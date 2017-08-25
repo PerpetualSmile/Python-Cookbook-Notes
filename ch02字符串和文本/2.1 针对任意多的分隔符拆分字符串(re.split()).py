@@ -17,7 +17,7 @@ delimiters = fields[1::2] + ['']
 print(delimiters)  # [' ', ';', ',', ',', ',', '']
 print(''.join(v + d for v, d in zip(values, delimiters)))  # asdf fjdk;afed,fjek,asdf,foo
 
-# 如果不想再结果中看到分隔字符，但仍想用括号对正则表达式模式进行分组，那么要确保用的是非捕获组，以?:...的形式指定
+# 如果不想在结果中看到分隔字符，但仍想用括号对正则表达式模式进行分组，那么要确保用的是非捕获组，以?:...的形式指定
 print(re.split(r'(?:;|,|\s)\s*', line))  # ['asdf', 'fjdk', 'afed', 'fjek', 'asdf', 'foo']
 
 print('-' * 100)
